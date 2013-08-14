@@ -7,7 +7,6 @@
 // -------------------------
 
 body {
-  margin: 0;
   font-family: @baseFontFamily;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
@@ -16,38 +15,23 @@ body {
 }
 
 
-// Links
-// -------------------------
-
-a {
-  color: @linkColor;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: @linkColorHover;
-  text-decoration: underline;
-}
-
-
 // Images
 // -------------------------
 
 // Rounded corners
 .img-rounded {
-  .border-radius(6px);
+  .border-radius(4px);
 }
 
 // Add polaroid-esque trim
 .img-polaroid {
-  padding: 4px;
+  padding: 0;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.2);
-  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+  border: 3px solid #FFFFFF;
+  .box-shadow(0 0 0 1px #AAAAAA);
 }
-
-// Perfect circle
-.img-circle {
-  .border-radius(500px); // crank the border-radius so it works with most reasonably sized images
+// Add a hover state for linked versions only
+a.img-polaroid:hover {
+  border-color: #FFFFFF;
+  .box-shadow(0 0 0 1px #dedede);
 }
